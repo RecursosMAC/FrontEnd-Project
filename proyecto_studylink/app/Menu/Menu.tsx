@@ -55,12 +55,7 @@ const Menu: React.FC = () => {
           })}
         </ul>
 
-        {/* Estadísticas rápidas */}
-        <div className={styles.userMetaStats}>
-          <div><i className="fas fa-book-open"></i> 24 mat.</div>
-          <div><i className="fas fa-download"></i> 342 ↓</div>
-          <div><i className="fas fa-star" style={{ color: "#fbbf24" }}></i> 4.8 ★</div>
-        </div>
+
 
         {/* Cerrar Sesión */}
         <div className={styles.logoutSection}>
