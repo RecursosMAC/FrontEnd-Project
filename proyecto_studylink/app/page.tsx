@@ -1,9 +1,10 @@
-import Image from "next/image";
 import Menu from "./Menu/Menu"
-export default function Home() {
+
+export default function HomePage() {
   return (
-    <>
-    <Menu></Menu>
-    </> 
+    <div style={{ display: "flex", minHeight: "100vh" }}>
+      <Menu />
+    </div>
   );
 }
+
