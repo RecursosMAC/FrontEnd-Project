@@ -1,6 +1,6 @@
 import Tarjeta from "./Tarjetas/tarjetas";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div style={{ display: "flex", gap: "20px" }}>
 
