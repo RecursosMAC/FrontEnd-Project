@@ -10,7 +10,7 @@ export default function HomePage() {
         <Barra />
 
         <main style={{ padding: "20px" }}>
-          <h1>Bienvenido</h1>
+          <h1></h1>
         </main>
       </div>
     </div>
