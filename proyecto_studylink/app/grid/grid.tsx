@@ -21,7 +21,7 @@ export default function Grid() {
         fecha={new Date(2025, 1, 10)}
         autor="Juan Pérez"
       />
-
+  
     </div>
   );
 }
