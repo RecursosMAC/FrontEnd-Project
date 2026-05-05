@@ -1,3 +1,4 @@
+import Grid from "./grid/grid";
 import Menu from "./Menu/Menu";
 import Barra from "./Barra/barra";
 import Tarjeta from "./Tarjetas/tarjetas";
@@ -6,7 +7,9 @@ export default function HomePage() {
   return (
     <div style={{ display: "flex", minHeight: "100vh" }}>
       <Menu />
-
+      
+      <Grid />;
+      
       <div style={{ flex: 1 }}>
         <Barra />
 

@@ -1,10 +1,17 @@
 .card {
   width: 260px;
+  box-sizing: border-box;
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
+}
+
+
+.body {
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .card:hover {
