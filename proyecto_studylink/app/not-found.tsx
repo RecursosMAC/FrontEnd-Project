@@ -40,11 +40,11 @@ export default function NotFound() {
     >
       <div style={{display: "flex",minHeight:"50vh"}}>
         <Menu />
-        <div style={{felx:1}}>
+        <div style={{flex:1}}>
         <Barra/>
       <h1 style={{ fontSize: "72px", margin: 5 }}>404</h1>
       <h2 style={{ margin: 5 }}>Pagina no encontrada</h2>
-      <p style={{ color: "#555", maxWidth: 480 }}>
+      <p style={{ color: "#555", maxWidth: 2000 }}>
         La ruta a la que intentas acceder no existe o fue movida.
       </p>
 
