@@ -20,6 +20,10 @@
 // =============================================================
 
 import Link from "next/link";
+import Menu from "./Menu/Menu";
+import Barra from "./Barra/barra";
+
+
 
 export default function NotFound() {
   return (
@@ -27,15 +31,19 @@ export default function NotFound() {
       style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignItems: "right",
         justifyContent: "center",
         textAlign: "center",
         padding: "80px 20px",
         gap: "16px",
       }}
     >
-      <h1 style={{ fontSize: "72px", margin: 0 }}>404</h1>
-      <h2 style={{ margin: 0 }}>Pagina no encontrada</h2>
+      <div style={{display: "flex",minHeight:"50vh"}}>
+        <Menu />
+        <div style={{felx:1}}>
+        <Barra/>
+      <h1 style={{ fontSize: "72px", margin: 5 }}>404</h1>
+      <h2 style={{ margin: 5 }}>Pagina no encontrada</h2>
       <p style={{ color: "#555", maxWidth: 480 }}>
         La ruta a la que intentas acceder no existe o fue movida.
       </p>
@@ -49,7 +57,7 @@ export default function NotFound() {
         href="/"
         style={{
           marginTop: "12px",
-          padding: "10px 20px",
+          padding: "5px 10px",
           backgroundColor: "#4267B2",
           color: "white",
           borderRadius: "6px",
@@ -58,6 +66,9 @@ export default function NotFound() {
       >
         Volver al inicio
       </Link>
+      </div>
+      </div>
+
     </main>
   );
 }
