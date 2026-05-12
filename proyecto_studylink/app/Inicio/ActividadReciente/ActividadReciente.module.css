@@ -1,0 +1,52 @@
+.container{
+  margin-top:2rem;
+
+  padding:0 2rem 2rem;
+}
+
+.container h2{
+  font-size:2rem;
+  font-weight:800;
+
+  margin-bottom:2rem;
+}
+
+.activity{
+  display:flex;
+  align-items:center;
+
+  gap:1rem;
+
+  margin-bottom:1.5rem;
+}
+
+.blue,
+.green,
+.yellow{
+  width:14px;
+  height:14px;
+
+  border-radius:50%;
+}
+
+.blue{
+  background:#3b82f6;
+}
+
+.green{
+  background:#14b8a6;
+}
+
+.yellow{
+  background:#f59e0b;
+}
+
+.activity h3{
+  font-size:1rem;
+  font-weight:600;
+}
+
+.activity p{
+  color:#6b7280;
+  margin-top:0.2rem;
+}
