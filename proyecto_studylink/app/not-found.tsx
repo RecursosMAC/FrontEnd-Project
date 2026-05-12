@@ -27,48 +27,72 @@ import Barra from "./Barra/barra";
 
 export default function NotFound() {
   return (
-    <main
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "right",
-        justifyContent: "center",
-        textAlign: "center",
-        padding: "80px 20px",
-        gap: "16px",
-      }}
-    >
-      <div style={{display: "flex",minHeight:"50vh"}}>
-        <Menu />
-        <div style={{flex:1}}>
-        <Barra/>
-      <h1 style={{ fontSize: "72px", margin: 5 }}>404</h1>
-      <h2 style={{ margin: 5 }}>Pagina no encontrada</h2>
-      <p style={{ color: "#555", maxWidth: 2000 }}>
-        La ruta a la que intentas acceder no existe o fue movida.
-      </p>
+  <div style={{ display: "flex", minHeight: "100vh" }}>
+    
+    <Menu />
 
-      {/*
-        Link es el componente de Next equivalente a <a>, pero hace
-        navegacion del lado del cliente (sin recargar la pagina).
-        Es el reemplazo de <Link> de react-router-dom.
-      */}
-      <Link
-        href="/"
+    <div style={{ flex: 1 }}>
+
+      <Barra />
+
+      <main
         style={{
-          marginTop: "12px",
-          padding: "5px 10px",
-          backgroundColor: "#4267B2",
-          color: "white",
-          borderRadius: "6px",
-          textDecoration: "none",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          minHeight: "80vh",
+          padding: "40px",
         }}
       >
-        Volver al inicio
-      </Link>
-      </div>
-      </div>
+        <h1
+          style={{
+            fontSize: "96px",
+            fontWeight: "800",
+            color: "#1e3a8a",
+            marginBottom: "10px",
+          }}
+        >
+          404
+        </h1>
 
-    </main>
-  );
+        <h2
+          style={{
+            fontSize: "32px",
+            marginBottom: "16px",
+          }}
+        >
+          Página no encontrada
+        </h2>
+
+        <p
+          style={{
+            color: "#6b7280",
+            maxWidth: "500px",
+            lineHeight: "1.6",
+            marginBottom: "30px",
+          }}
+        >
+          La ruta a la que intentas acceder no existe o fue movida.
+        </p>
+
+        <Link
+          href="/"
+          style={{
+            padding: "14px 24px",
+            backgroundColor: "#2563eb",
+            color: "white",
+            borderRadius: "12px",
+            textDecoration: "none",
+            fontWeight: "600",
+          }}
+        >
+          Volver al inicio
+        </Link>
+      </main>
+
+    </div>
+  </div>
+);
 }
