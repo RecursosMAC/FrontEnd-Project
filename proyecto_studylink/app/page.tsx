@@ -1,7 +1,8 @@
-import Grid from "./grid/grid";
-import Tarjeta from "./Tarjetas/tarjetas";
 import Menu from "./Menu/Menu";
 import Barra from "./Barra/barra";
+import Bienvenido from "./Inicio/Bienvenido/Bienvenido";
+// import OpcionesMenu from "./Inicio/OpcionesMenu/OpcionesMenu";
+// import ActividadReciente from "./Inicio/ActividadReciente/ActividadReciente";
 
 
 export default function HomePage() {
@@ -11,10 +12,8 @@ export default function HomePage() {
       
       <div style={{ flex: 1 }}>
         <Barra />
-        <Grid />
+        <Bienvenido />
       </div>
     </div>
   );
 }
-
-
