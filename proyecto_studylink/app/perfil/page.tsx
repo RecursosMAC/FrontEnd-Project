@@ -1,8 +1,10 @@
 import Menu from "../Menu/Menu";
 import Barra from "../Barra/barra";
+
 import HeaderPerfil from "./HeaderPerfil/HeaderPerfil";
-import Estadisticas from "./Estadisticas/Estadisticas";
 import Informacion from "./Informacion/Informacion";
+import Asesor from "./Asesor/Asesor";
+import Estadisticas from "./Estadisticas/Estadisticas";
 // import Actividad from "./Actividad/Actividad";
 
 export default function PerfilPage() {
@@ -14,7 +16,6 @@ export default function PerfilPage() {
         background: "#f3f4f6",
       }}
     >
-      
       <Menu />
 
       <div
@@ -24,17 +25,18 @@ export default function PerfilPage() {
           flexDirection: "column",
         }}
       >
-        
         <Barra />
 
         <HeaderPerfil />
 
-        <Estadisticas />        
+        <Informacion />
 
-        <Informacion />        
+        <Asesor />
 
+        <Estadisticas />
+
+   
       </div>
-
     </div>
   );
 }
