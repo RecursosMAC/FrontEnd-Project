@@ -2,7 +2,7 @@ import Menu from "../Menu/Menu";
 import Barra from "../Barra/barra";
 import HeaderPerfil from "./HeaderPerfil/HeaderPerfil";
 import Estadisticas from "./Estadisticas/Estadisticas";
-// import Informacion from "./Informacion/Informacion";
+import Informacion from "./Informacion/Informacion";
 // import Actividad from "./Actividad/Actividad";
 
 export default function PerfilPage() {
@@ -31,7 +31,7 @@ export default function PerfilPage() {
 
         <Estadisticas />        
 
-        
+        <Informacion />        
 
       </div>
 
