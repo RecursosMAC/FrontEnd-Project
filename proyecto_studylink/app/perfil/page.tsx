@@ -1,0 +1,39 @@
+import Menu from "../Menu/Menu";
+import Barra from "../Barra/barra";
+import HeaderPerfil from "./HeaderPerfil/HeaderPerfil";
+import Informacion from "./Informacion/Informacion";
+import Asesor from "./Asesor/Asesor";
+import Estadisticas from "./Estadisticas/Estadisticas";
+
+export default function PerfilPage() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        minHeight: "100vh",
+        background: "#f3f4f6",
+      }}
+    >
+      <Menu />
+
+      <div
+        style={{
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Barra />
+
+        <HeaderPerfil />
+
+        <Informacion />
+
+        <Asesor />
+
+        <Estadisticas />
+
+      </div>
+    </div>
+  );
+}

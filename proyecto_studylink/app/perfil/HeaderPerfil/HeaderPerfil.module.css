@@ -1,0 +1,62 @@
+.container{
+  background:linear-gradient(
+    135deg,
+    #1e3a8a,
+    #312e81
+  );
+
+  color:white;
+
+  padding:3rem;
+
+  border-radius:0 0 24px 24px;
+
+  display:flex;
+  align-items:center;
+  gap:2rem;
+}
+
+.avatar{
+  width:110px;
+  height:110px;
+
+  border-radius:50%;
+
+  background:white;
+  color:#1e3a8a;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:3rem;
+  font-weight:800;
+}
+
+.info{
+  flex:1;
+}
+
+.info h1{
+  font-size:2.5rem;
+  margin-bottom:0.5rem;
+}
+
+.info p{
+  opacity:0.9;
+}
+
+.button{
+  background:white;
+  color:#1e3a8a;
+
+  border:none;
+
+  padding:14px 22px;
+
+  border-radius:12px;
+
+  font-weight:700;
+
+  cursor:pointer;
+}
