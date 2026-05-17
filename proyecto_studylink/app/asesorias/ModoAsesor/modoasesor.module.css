@@ -14,8 +14,8 @@
 .card {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 15px;
-  padding: 200px;
+  border-radius: 20px;
+  padding: 30px;
 }
 
 /* HEADER */
@@ -70,7 +70,7 @@
 .divider {
   height: 1px;
   background: #e2e8f0;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 /* SUBJECTS */
@@ -88,13 +88,13 @@
 .subjects {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
 /* CHIP */
 .subject {
-  padding: 8px 14px;
-  border-radius: 999px;
+  padding: 14px 30px;
+  border-radius: 999;
   background: #e2e8f0;
   border: none;
   font-size: 0.8rem;

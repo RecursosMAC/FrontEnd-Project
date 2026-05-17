@@ -7,12 +7,19 @@ export const ModoAsesor = () => {
   const [active, setActive] = useState(true);
 
   const materias = [
-    "Algoritmos y Estructuras de Datos",
+    "Estructuras de Datos",
     "Programación Orientada a Objetos",
     "Bases de Datos",
     "Desarrollo Web",
-    "Cálculo Diferencial e Integral",
+    "Álgebra superior",
     "Álgebra Lineal",
+    "Optimización I",
+    "Estadistica I",
+    "Cálculo Integral",
+    "Optimización II",
+    "Geometria del espacio",
+    "Programación II",
+    "Probabilidad",
   ];
 
   const [selected, setSelected] = useState<string[]>([]);
