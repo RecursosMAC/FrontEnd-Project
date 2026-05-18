@@ -1,6 +1,7 @@
 import Barra from "./Barra/barra";
 import Menu from "./Menu/Menu"
 import { ModoAsesor } from "./ModoAsesor/modoasesor"
+import {AsesoresDisponibles} from "./asesoresdisponibles/asesoresdisponibles"
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <div style={{ flex: 1 }}>
         <Barra />
         <ModoAsesor />
+        <AsesoresDisponibles />
       </div>
     </div>
   );
