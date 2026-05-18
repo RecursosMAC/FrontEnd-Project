@@ -4,7 +4,7 @@ import { Tarjetas } from '../Tarjetas/Tarjetas';
 import { Notificacion } from '../Notificacion/Notificacion';
 import styles from './asesoresdisponibles.module.css';
 
-// Datos de asesores (incluyendo el nuevo con badge)
+// Datos de asesores 
 interface Asesor {
   nombre: string;
   carrera?: string;
@@ -62,7 +62,7 @@ export const AsesoresDisponibles = () => {
   const [mensajeNotificacion, setMensajeNotificacion] = useState<string | null>(null);
 
   const handleContactar = (nombre: string) => {
-    setMensajeNotificacion(`📬 Solicitud enviada a ${nombre}. Pronto recibirás respuesta.`);
+    setMensajeNotificacion(` Solicitud enviada a ${nombre}. Pronto recibirás respuesta.`);
     setTimeout(() => setMensajeNotificacion(null), 3000);
   };
 
@@ -70,7 +70,7 @@ export const AsesoresDisponibles = () => {
     <>
       <div className={styles.header}>
         <div className={styles.tituloSeccion}>
-          <i className="fas fa-users" style={{ color: "#2c7da0" }}></i> Asesores Disponibles
+          <i className="fas fa-users" style={{ color: "#12b81a" }}></i> Asesores Disponibles
         </div>
         <p className={styles.subtitulo}>
           Conecta con tutores expertos y resuelve tus dudas académicas.
