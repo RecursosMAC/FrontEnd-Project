@@ -1,7 +1,10 @@
-import Barra from "./Barra/barra";
-import Menu from "./Menu/Menu"
-import { ModoAsesor } from "./ModoAsesor/modoasesor"
-import {AsesoresDisponibles} from "./asesoresdisponibles/asesoresdisponibles"
+import Barra from "../Barra/barra";
+import Menu from "../Menu/Menu";
+
+import { ModoAsesor } from "./ModoAsesor/modoasesor";
+import { AsesoresDisponibles } from "./asesoresdisponibles/asesoresdisponibles";
+
+import Footer from "../Footer/Footer";
 
 export default function HomePage() {
   return (
@@ -12,6 +15,7 @@ export default function HomePage() {
         <Barra />
         <ModoAsesor />
         <AsesoresDisponibles />
+        <Footer />
       </div>
     </div>
   );

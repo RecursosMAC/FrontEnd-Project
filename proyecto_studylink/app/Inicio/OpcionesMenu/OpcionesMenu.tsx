@@ -24,7 +24,7 @@ export default function OpcionesMenu() {
         </p>
       </Link>
 
-      <Link href="/asesoria" className={styles.cardGreen}>
+      <Link href="/asesorias" className={styles.cardGreen}>
         <div className={styles.iconGreen}>
           <Search size={28}/>
         </div>

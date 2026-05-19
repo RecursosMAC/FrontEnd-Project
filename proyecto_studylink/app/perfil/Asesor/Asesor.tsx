@@ -14,7 +14,6 @@ export default function Asesor() {
     "Cálculo I",
     "Álgebra Lineal",
     "Estadistica I",
-    "Based de Datos",
     "Métodos numéricos I",
     "Programación I",
     "Optimización I",
@@ -23,20 +22,32 @@ export default function Asesor() {
     "Álgebra superior",
   ];
 
+  // Estado del switch
+  const [modoAsesor, setModoAsesor] =
+    useState(false);
+
+  // Materias seleccionadas
   const [materiasSeleccionadas, setMateriasSeleccionadas] =
     useState<string[]>([
-      "Algoritmos y Estructuras de Datos",
       "Programación Orientada a Objetos",
     ]);
 
   const toggleMateria = (materia: string) => {
+
+    // Si NO está activo el modo asesor
+    // no hace nada
+    if (!modoAsesor) return;
+
     if (materiasSeleccionadas.includes(materia)) {
+
       setMateriasSeleccionadas(
         materiasSeleccionadas.filter(
           (m) => m !== materia
         )
       );
+
     } else {
+
       setMateriasSeleccionadas([
         ...materiasSeleccionadas,
         materia,
@@ -48,6 +59,7 @@ export default function Asesor() {
     <section className={styles.container}>
 
       <div className={styles.header}>
+
         <div>
           <h2>Modo Asesor</h2>
 
@@ -57,9 +69,27 @@ export default function Asesor() {
         </div>
 
         <label className={styles.switch}>
-          <input type="checkbox" defaultChecked />
+
+          <input
+            type="checkbox"
+
+            checked={modoAsesor}
+
+            onChange={() => {
+
+  setModoAsesor(!modoAsesor);
+
+  if (modoAsesor) {
+    setMateriasSeleccionadas([]);
+  }
+
+}}
+          />
+
           <span className={styles.slider}></span>
+
         </label>
+
       </div>
 
       <h3>
@@ -72,10 +102,18 @@ export default function Asesor() {
 
           <button
             key={materia}
-            onClick={() => toggleMateria(materia)}
+
+            onClick={() =>
+              toggleMateria(materia)
+            }
+
+            disabled={!modoAsesor}
+
             className={
               materiasSeleccionadas.includes(materia)
                 ? styles.activeTag
+                : !modoAsesor
+                ? styles.disabledTag
                 : styles.tag
             }
           >
@@ -87,11 +125,15 @@ export default function Asesor() {
       </div>
 
       <div className={styles.rating}>
+
         ⭐⭐⭐⭐⭐
 
         <span>4.8</span>
 
-        <p>18 asesorías realizadas</p>
+        <p>
+          18 asesorías realizadas
+        </p>
+
       </div>
 
     </section>
