@@ -7,7 +7,7 @@ export default function Grid() {
       <Tarjeta
         tipo="pdf"
         titulo="Algoritmos de Ordenamiento"
-        carrera="Ing. en Computación"
+        carrera="Matemáticas Aplicadas y Computación"
         materia="Estructuras de Datos"
         fecha={new Date(2025, 0, 14)}
         autor="Ana García Martínez"
@@ -16,7 +16,7 @@ export default function Grid() {
       <Tarjeta
         tipo="video"
         titulo="Cálculo Integral"
-        carrera="Matemáticas"
+        carrera="Actuaría"
         materia="Cálculo II"
         fecha={new Date(2025, 1, 10)}
         autor="Juan Pérez"

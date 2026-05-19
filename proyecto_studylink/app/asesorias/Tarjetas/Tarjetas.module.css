@@ -1,0 +1,116 @@
+.tarjeta {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  background: #2c7da0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e2a3a;
+}
+
+.info p {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  color: #5a6e7c;
+}
+
+.badge {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #1e5f7a;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 30px;
+  margin-top: 0.3rem;
+}
+
+.materiasSection {
+  margin: 1rem 0;
+}
+
+.materiasTitulo {
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #5a6e7c;
+  margin-bottom: 0.5rem;
+}
+
+.materiasLista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.materiasLista li {
+  font-size: 0.85rem;
+  color: #2c3e50;
+  padding: 0.2rem 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.materiasLista li:last-child {
+  border-bottom: none;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  margin: 1rem 0 1.2rem;
+  color: #4a627a;
+}
+
+.contactarBtn {
+  width: 100%;
+  background: #2c7da0;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.contactarBtn:hover {
+  background: #1f5e7a;
+}
