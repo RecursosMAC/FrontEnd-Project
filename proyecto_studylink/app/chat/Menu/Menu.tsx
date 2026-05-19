@@ -1,11 +1,27 @@
 "use client";
 
-import React from "react";
-import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import styles from "./Menu.module.css";
 
 const Menu: React.FC = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const [user, setUser] = useState<{
+    name: string;
+    role: string;
+  } | null>(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+
+    if (!storedUser) {
+      router.push("/login");
+    } else {
+      setUser(JSON.parse(storedUser));
+    }
+  }, [router]);
 
   const navItems = [
     { name: "Inicio", href: "/", icon: "fas fa-home" },
@@ -15,6 +31,11 @@ const Menu: React.FC = () => {
     { name: "Mi Perfil", href: "/perfil", icon: "fas fa-user-circle" },
   ];
 
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    router.push("/login");
+  };
+
   return (
     <aside className={styles.sidebar}>
       <div className={styles.sidebarInner}>
@@ -23,6 +44,7 @@ const Menu: React.FC = () => {
           <div className={styles.logoIcon}>
             <i className="fas fa-link"></i>
           </div>
+
           <div className={styles.logoText}>
             Study<span>Link</span>
           </div>
@@ -30,10 +52,17 @@ const Menu: React.FC = () => {
 
         {/* Perfil del usuario */}
         <div className={styles.userProfile}>
-          <div className={styles.avatar}>AG</div>
+          <div className={styles.avatar}>
+            {user?.name
+              ?.split(" ")
+              .map((word) => word[0])
+              .slice(0, 2)
+              .join("")}
+          </div>
+
           <div className={styles.userInfo}>
-            <h4>Ana García Martínez</h4>
-            <p>Asesor Activo</p>
+            <h4>{user?.name || "Usuario"}</h4>
+            <p>{user?.role || "Sin rol"}</p>
           </div>
         </div>
 
@@ -41,10 +70,13 @@ const Menu: React.FC = () => {
         <ul className={styles.navMenu}>
           {navItems.map((item) => {
             const isActive = pathname === item.href;
+
             return (
               <li
                 key={item.name}
-                className={`${styles.navItem} ${isActive ? styles.active : ""}`}
+                className={`${styles.navItem} ${
+                  isActive ? styles.active : ""
+                }`}
               >
                 <a href={item.href} className={styles.navLink}>
                   <i className={item.icon}></i>
@@ -55,14 +87,15 @@ const Menu: React.FC = () => {
           })}
         </ul>
 
-
-
-        {/* Cerrar Sesión */}
+        {/* Cerrar sesión */}
         <div className={styles.logoutSection}>
-          <a href="/logout" className={styles.logoutBtn}>
+          <button
+            className={styles.logoutBtn}
+            onClick={handleLogout}
+          >
             <i className="fas fa-sign-out-alt"></i>
             <span>Cerrar Sesión</span>
-          </a>
+          </button>
         </div>
       </div>
     </aside>
@@ -70,4 +103,3 @@ const Menu: React.FC = () => {
 };
 
 export default Menu;
-
