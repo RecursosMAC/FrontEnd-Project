@@ -17,11 +17,13 @@ export default function Footer() {
               🎓
             </div>
 
-            <h2>StudyLink</h2>
+            <h2 className={styles.whiteText}>
+              StudyLink
+            </h2>
 
           </div>
 
-          <p className={styles.description}>
+          <p className={`${styles.description} ${styles.whiteText}`}>
             Plataforma académica colaborativa diseñada
             para compartir apuntes, asesorías y recursos
             universitarios.
@@ -32,7 +34,9 @@ export default function Footer() {
         {/* Navegación */}
         <div className={styles.footerColumn}>
 
-          <h3>Navegación</h3>
+          <h3 className={styles.whiteText}>
+            Navegación
+          </h3>
 
           <ul className={styles.footerList}>
 
@@ -55,7 +59,7 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link href="/asesoria">
+              <Link href="/asesorias">
                 Asesorías
               </Link>
             </li>
@@ -67,30 +71,32 @@ export default function Footer() {
         {/* Recursos */}
         <div className={styles.footerColumn}>
 
-          <h3>Recursos</h3>
+          <h3 className={styles.whiteText}>
+            Recursos
+          </h3>
 
           <ul className={styles.footerList}>
 
             <li>
-              <Link href="/">
+              <Link href="/404">
                 Guía de Uso
               </Link>
             </li>
 
             <li>
-              <Link href="/">
+              <Link href="/404">
                 Preguntas Frecuentes
               </Link>
             </li>
 
             <li>
-              <Link href="/">
+              <Link href="/404">
                 Soporte
               </Link>
             </li>
 
             <li>
-              <Link href="/">
+              <Link href="/404">
                 Comunidad
               </Link>
             </li>
@@ -102,16 +108,38 @@ export default function Footer() {
         {/* Contacto */}
         <div className={styles.footerColumn}>
 
-          <h3>Contacto</h3>
+          <h3 className={styles.whiteText}>
+            Contacto
+          </h3>
 
           <ul className={styles.contactList}>
 
-            <li>✉ contacto@studylink.com</li>
+            <li>
+              <a href="mailto:contacto@studylink.com">
+                ✉ contacto@studylink.com
+              </a>
+            </li>
 
-            <li>📞 55 5622 1234</li>
+            <li className={styles.whiteText}>
+              📞 55 5622 1234
+            </li>
 
             <li>
-              📍 FES Acatlán, UNAM
+              <Link href="/institucional/unam">
+                📍FES Acatlán - UNAM
+              </Link>
+            </li>
+
+            <li>
+              <a
+                href="https://maps.app.goo.gl/xKfA3UKtWDJwjAix8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Av. Alcanfores y San Juan Totoltepec s/n,
+                Santa Cruz Acatlán, Naucalpan,
+                Estado de México
+              </a>
             </li>
 
           </ul>
@@ -140,11 +168,11 @@ export default function Footer() {
 
       <div className={styles.footerBottom}>
 
-        <p>
-          Hecho en FES-A 💙💛
+        <p className={styles.whiteText}>
+          Hecho en FES-Acatlán por estudiantes para estudiantes.
         </p>
 
-        <p>
+        <p className={styles.whiteText}>
           © 2025 StudyLink.
           Todos los derechos reservados.
         </p>

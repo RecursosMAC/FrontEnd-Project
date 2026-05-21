@@ -110,8 +110,8 @@
 }
 
 .socials a{
-  width:40px;
-  height:40px;
+  width:100px;
+  height:50px;
 
   border-radius:50%;
 
@@ -153,4 +153,34 @@
   color:#d1d5db;
 
   font-size:0.9rem;
+}
+
+.whiteText {
+  color: white;
+}
+
+.footerContainer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerContainer a:visited {
+  color: white;
+}
+
+.footerContainer a:hover {
+  color: white;
+}
+
+.footerContainer li {
+  color: white;
+}
+
+.footerContainer p {
+  color: white;
+}
+
+.footerContainer h2,
+.footerContainer h3 {
+  color: white;
 }
