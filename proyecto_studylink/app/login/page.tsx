@@ -3,26 +3,43 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./login.module.css";
+import { supabase } from "../lib/supabase";
 
 export default function LoginPage() {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (!email || !password) {
       alert("Completa todos los campos");
       return;
     }
 
-    /* Simulación de sesión */
+    setLoading(true);
+
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email.trim(),
+      password,
+    });
+
+    setLoading(false);
+
+    if (error) {
+      alert(error.message);
+      return;
+    }
+
+    if (!data.session) {
+      alert("No se ha podido iniciar sesión. Intenta nuevamente.");
+      return;
+    }
+
     localStorage.setItem(
       "user",
-      JSON.stringify({
-        name: "Ana García Martínez",
-        role: "Asesor Activo",
-      })
+      JSON.stringify({ name: email.split("@")[0], role: "Estudiante" })
     );
 
     router.push("/");

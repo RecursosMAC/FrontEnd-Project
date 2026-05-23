@@ -35,6 +35,7 @@ export default function PerfilPage() {
         <Estadisticas />
 
         <Footer />
+        
 
       </div>
     </div>

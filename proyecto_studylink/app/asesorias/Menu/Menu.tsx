@@ -32,7 +32,7 @@ const Menu: React.FC = () => {
         <div className={styles.userProfile}>
           <div className={styles.avatar}>AG</div>
           <div className={styles.userInfo}>
-            <h4>Ana García Martínez</h4>
+            <h4>Emi is the best</h4>
             <p>Asesor Activo</p>
           </div>
         </div>

@@ -1,6 +1,40 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import styles from "./Informacion.module.css";
+import { supabase } from "../../lib/supabase";
+
+type User = {
+  email: string;
+};
 
 export default function Informacion() {
+  const [user, setUser] = useState<User | null>(null);
+
+  useEffect(() => {
+    async function loadSession() {
+      const { data, error } = await supabase.auth.getSession();
+
+      const session = data?.session;
+
+      // Sin sesión
+      if (error || !session) {
+        setUser(null);
+        return;
+      }
+
+      const email = session.user.email;
+
+      if (email) {
+        setUser({
+          email,
+        });
+      }
+    }
+
+    loadSession();
+  }, []);
+
   return (
     <section className={styles.container}>
 
@@ -32,7 +66,10 @@ export default function Informacion() {
 
           <input
             type="email"
-            value="324967089@pcpuma.acatlan.unam.mx"
+            value={
+              user?.email ||
+              "Se requiere inicio de sesión"
+            }
             readOnly
           />
         </div>

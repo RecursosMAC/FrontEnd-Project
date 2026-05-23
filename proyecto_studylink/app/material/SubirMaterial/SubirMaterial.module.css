@@ -1,0 +1,109 @@
+.buttonContainer{
+  display:flex;
+  justify-content:flex-end;
+
+  margin:2rem;
+}
+
+.uploadButton{
+  background:#2563eb;
+
+  color:white;
+
+  border:none;
+
+  padding:14px 22px;
+
+  border-radius:12px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.uploadButton:hover{
+  background:#1d4ed8;
+}
+
+.overlay{
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,0.4);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  z-index:1000;
+}
+
+.modal{
+  width:450px;
+
+  background:white;
+
+  padding:2rem;
+
+  border-radius:20px;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:1rem;
+}
+
+.modal h2{
+  margin-bottom:1rem;
+}
+
+.modal input,
+.modal select{
+  padding:14px 16px;
+
+  border-radius:12px;
+
+  border:1px solid #d1d5db;
+
+  background:#f9fafb;
+
+  outline:none;
+}
+
+.actions{
+  display:flex;
+  justify-content:flex-end;
+
+  gap:1rem;
+
+  margin-top:1rem;
+}
+
+.cancel{
+  background:#e5e7eb;
+
+  border:none;
+
+  padding:12px 18px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+}
+
+.save{
+  background:#2563eb;
+
+  color:white;
+
+  border:none;
+
+  padding:12px 18px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+}

@@ -36,7 +36,7 @@ export default function OpcionesMenu() {
         </p>
       </Link>
 
-      <Link href="/mensajes" className={styles.cardYellow}>
+      <Link href="/chat" className={styles.cardYellow}>
         <div className={styles.iconYellow}>
           <MessageSquare size={28}/>
         </div>

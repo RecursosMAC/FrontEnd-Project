@@ -22,7 +22,7 @@
 import Link from "next/link";
 import Menu from "./Menu/Menu";
 import Barra from "./Barra/barra";
-
+import Footer from "./Footer/Footer";
 
 
 export default function NotFound() {
@@ -43,7 +43,6 @@ export default function NotFound() {
           justifyContent: "center",
           textAlign: "center",
           minHeight: "80vh",
-          padding: "40px",
         }}
       >
         <h1
@@ -90,6 +89,8 @@ export default function NotFound() {
         >
           Volver al inicio
         </Link>
+          <Footer />
+
       </main>
 
     </div>
