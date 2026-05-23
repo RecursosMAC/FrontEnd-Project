@@ -1,6 +1,42 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import styles from "./barra.module.css";
+import {supabase} from "../lib/supabase";
+
+type User = {
+  username: string;
+};
 
 export default function Barra() {
+  const [user, setUser] = useState<User | null>(null);
+
+  useEffect(() => {
+    async function loadSession() {
+      const { data, error } = await supabase.auth.getSession();
+
+      const session = data?.session;
+
+      // Sin sesión
+      if (error || !session) {
+        setUser(null);
+        return;
+      }
+
+      const email = session.user.email;
+
+      if (email) {
+        const username = email.split("@")[0];
+
+        setUser({
+          username,
+        });
+      }
+    }
+
+    loadSession();
+  }, []);
+
   return (
     <header className={styles.header}>
 
@@ -18,7 +54,9 @@ export default function Barra() {
         <span>🔔</span>
 
         <div className={styles.avatar}>
-          A
+          {user
+            ? user.username.charAt(0).toUpperCase()
+            : "U"}
         </div>
       </div>
 

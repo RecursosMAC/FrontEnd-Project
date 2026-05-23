@@ -14,14 +14,14 @@ const Menu: React.FC = () => {
   } | null>(null);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
+  const storedUser = localStorage.getItem("user");
 
-    if (!storedUser) {
-      router.push("/login");
-    } else {
-      setUser(JSON.parse(storedUser));
-    }
-  }, [router]);
+  if (storedUser) {
+    setUser(JSON.parse(storedUser));
+  } else {
+    setUser(null);
+  }
+}, []);
 
   const navItems = [
     { name: "Inicio", href: "/", icon: "fas fa-home" },
